@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+    <title>Document</title>
+    <link href="src/styles.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <header>
+        <div class="nav">
+            <button onclick="generateBlocks()">Generate/Reset</button>
+            <input type="range" min="10" max="30" onchange="updateArraySize(this.value);" oninput="updateArraySize(this.value)" >
+            <button onclick="bubbleSort()">Bubble Sort</button>
+            <button onclick="selectionSort()">Selection Sort</button>
+            <button onclick="insertionSort()">Insertion Sort</button>
+            <button onclick="mergeSort()">Merge Sort</button>
+        </div>
+    </header>
+    <section class="data-container"></section>
+    <script src = "src/components/swapBar.js"></script>
+    <script src="src/components/generateArray.js"></script>
+    <script src="./src/Algorithms/bubbleSort.js"></script>
+    <script src="./src/Algorithms/selectionSort.js"></script>
+    <script src="./src/Algorithms/insertionSort.js"></script>
+    <script src="./src/Algorithms/mergeSort.js"></script>
+    <script src="src/components/sliderUpdate.js"></script>
+    <script src="./src/index.js"></script>
+</body>
+</html>
