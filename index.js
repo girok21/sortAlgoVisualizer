@@ -5,4 +5,4 @@ const array = [];
 // let left = -1;
 
 generateBlocks();
-console.log(array);
+// console.log(array);
