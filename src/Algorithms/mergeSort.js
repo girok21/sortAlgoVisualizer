@@ -3,6 +3,7 @@ async function mergeSort()
     let blocks = document.querySelectorAll(".block");
     let r = blocks.length-1;
     await funMergeSort(0, r);
+
 }
 
 async function funMergeSort(l,r, delay = 250)
@@ -40,7 +41,7 @@ async function merge(l,m,r,delay = 250)
             return;
     }
     let start1 = l;
-    while(start1<=m && start2<=r)
+    while(start1<=r && start2<=r)
     {
         ht1 = parseInt(blocks[start1].style.height);
         ht2 = parseInt(blocks[start2].style.height);
@@ -64,6 +65,7 @@ async function merge(l,m,r,delay = 250)
         start1++;
     }
     await highlight(l,r,"#13C366");
+    dispHeight();
 }
 
 async function highlight(l,r,colorcode,delay = 250)

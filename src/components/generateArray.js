@@ -23,9 +23,10 @@ function generateBlocks() {
       // block.appendChild(blockLabel);
       container.appendChild(block);
     }
-    console.log(container.children);
+    // console.log(container.children);
     // return container;
-    console.log(array);
+    // console.log(array);
+    dispHeight();
   }
 
   function removeAllChildNodes(container) {

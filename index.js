@@ -6,4 +6,5 @@ const array = [];
 let ind = 0;
 let ind2 = 4;
 generateBlocks();
+
 // console.log(array);

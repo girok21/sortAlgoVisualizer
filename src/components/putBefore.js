@@ -1,7 +1,7 @@
 async function slideBarsRight(left, right)
 {
-    console.log(left);
-    console.log(right);
+    // console.log(left);
+    // console.log(right);
     return new Promise(resolve => {
     let blocks = document.querySelectorAll(".block");
 
