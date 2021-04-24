@@ -1,4 +1,5 @@
 async function quickSort() {
+  disableSensitiveButton();
     let blocks = document.querySelectorAll(".block");
     let end = blocks.length-1;
     await funquickSort(0,end);
@@ -23,54 +24,13 @@ async function partition(low, high)
       }, delay)
     );
     let i = (low - 1); // Index of smaller element and indicates the right position of pivot found so far
-    // if(i>=low && i<=high)
-    // {
-    //     blocks[i].style.backgroundColor = "orange";
-    // }
     for (let j = low; j <= high - 1; j++)
     {
-        // If current element is smaller than the pivot
-        // blocks[j].style.backgroundColor = "yellow";
-        // await new Promise((resolve) =>
-        //   setTimeout(() => {
-        //     resolve();
-        //   }, delay)
-        // );
         if (parseInt(blocks[j].style.height) < pivot)
         {
-            // if(i>=low && i<=high)
-            // {
-            //     blocks[i].style.backgroundColor = "#58B7FF";
-            // }
-            // await new Promise((resolve) =>
-            //   setTimeout(() => {
-            //     resolve();
-            //   }, delay)
-            // );
-            // blocks[j].style.backgroundColor = "#58B7FF";
-            // await new Promise((resolve) =>
-            //   setTimeout(() => {
-            //     resolve();
-            //   }, delay)
-            // );
             i++; // increment index of smaller element
             await swapInd(i,j);
-            // blocks[i].style.backgroundColor = "orange";
-            // await new Promise((resolve) =>
-            //   setTimeout(() => {
-            //     resolve();
-            //   }, delay)
-            // );
         }
-        // else
-        // {
-        //     blocks[j].style.backgroundColor = "#58B7FF";
-        //     await new Promise((resolve) =>
-        //       setTimeout(() => {
-        //         resolve();
-        //       }, delay)
-        //     );
-        // }
     }
     await swapInd(i+1,high);
     blocks = document.querySelectorAll(".block");
@@ -96,9 +56,5 @@ async function funquickSort(low, high)
         await funquickSort(low, pi - 1);
         await funquickSort(pi + 1, high);
     }
+    enalbeSensitiveButton();
 }
-// async function funquickSort(start, end){
-//     let pivotValue = blocks[end].height;
-//     let pivotIndex = end;
-
-// }

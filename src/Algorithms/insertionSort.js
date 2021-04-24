@@ -1,4 +1,5 @@
-async function insertionSort(delay = 250) {
+async function insertionSort() {
+  disableSensitiveButton();
     let blocks = document.querySelectorAll(".block");
     // blocks[0].style.backgroundColor = "#13CE66";
     for (let i = 0; i < blocks.length; i++) {
@@ -38,4 +39,5 @@ async function insertionSort(delay = 250) {
       blocks[keyindex].style.backgroundColor = "#13CE66";
       blocks = document.querySelectorAll(".block");
     }
+    enalbeSensitiveButton();
   }

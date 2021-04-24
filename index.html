@@ -11,16 +11,25 @@
 <body>
     
     <header>
-        <div class="nav">
-            <button onclick="generateBlocks()">Generate/Reset</button>
-            <input type="range" min="10" max="50" onchange="updateArraySize(this.value);" oninput="updateArraySize(this.value)" >
-            <input type="range" min="20" max="600" onchange="updateTransSpeed(this.value);" oninput="updateTransSpeed(this.value)" >
-            <button onclick="bubbleSort()">Bubble Sort</button>
-            <button onclick="selectionSort()">Selection Sort</button>
-            <button onclick="insertionSort()">Insertion Sort</button>
-            <button onclick="mergeSort()">Merge Sort</button>
-            <button onclick="quickSort()">Quick Sort</button> 
-        </div>
+        <nav>
+                <label>Sorting Visualizer</label>
+               
+                <ul class="u1">
+                    <button id ="button1" onclick="generateBlocks()">Generate/Reset</button>
+                    <button id ="button2" onclick="bubbleSort()">Bubble Sort</button>
+                    <button id ="button3" onclick="selectionSort()">Selection Sort</button>
+                    <button id ="button4" onclick="insertionSort()">Insertion Sort</button>
+                    <button id ="button5" onclick="mergeSort()">Merge Sort</button>
+                    <button id ="button6" onclick="quickSort()">Quick Sort</button> 
+                </ul>
+                <p class="p1"><b>Array Size: </b> 
+                       min <input type="range" id = "sizeRange" min="10" max="60" onchange="updateArraySize(this.value);" oninput="updateArraySize(this.value)" > max        
+                </p> 
+                <p class="p2">
+                    <b>Transition Speed:</b>  
+                       slow <input type="range" min="17" max="600" onchange="updateTransSpeed(this.value);" oninput="updateTransSpeed(this.value)" > fast
+                </p>
+        </nav>
     </header>
     <section class="data-container"></section>
     <script src = "src/components/swapBar.js"></script>
@@ -34,6 +43,7 @@
     <script src="src/components/sizeUpdate.js"></script>
     <script src="src/components/speedUpdate.js"></script>
     <script src="src/components/putBefore.js"></script>
+    <script src="src/components/disableButton.js"></script>
     <script src="./index.js"></script>
 </body>
 </html>

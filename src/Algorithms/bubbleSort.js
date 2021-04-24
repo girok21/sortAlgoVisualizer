@@ -1,4 +1,6 @@
 async function bubbleSort() {
+  console.log("idhar");
+  disableSensitiveButton();
     let blocks = document.querySelectorAll(".block");
     for (let i = 0; i < blocks.length - 1; i += 1) {
       for (let j = 0; j < blocks.length - i - 1; j += 1) {
@@ -33,5 +35,6 @@ async function bubbleSort() {
     }
     blocks[0].style.backgroundColor = "#13C366";
     blocks = document.querySelectorAll(".block");
+    enalbeSensitiveButton();
   }
 

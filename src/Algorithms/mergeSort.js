@@ -1,5 +1,6 @@
 async function mergeSort()
 {
+    disableSensitiveButton();
     let blocks = document.querySelectorAll(".block");
     let r = blocks.length-1;
     await funMergeSort(0, r);
@@ -10,6 +11,7 @@ async function mergeSort()
         resolve();
       }, delay)
     );
+    enalbeSensitiveButton();
 }
 
 async function funMergeSort(l,r)
