@@ -14,7 +14,6 @@ async function mergeSort()
 
 async function funMergeSort(l,r)
 {
-    // let blocks = document.querySelectorAll(".block");
     if(l>=r)
     {    
         if(l==r)
@@ -32,12 +31,7 @@ async function funMergeSort(l,r)
 
 async function merge(l,m,r)
 {
-    let blocks = document.querySelectorAll(".block");
-    // if(blocks[m].style.height <= blocks[m+1].style.height)
-    // {
-    //     await highlight(l,r,"#13C366");
-    //     return;
-    // }  
+    let blocks = document.querySelectorAll(".block"); 
     let start2 = m+1;//first index of the second half of the array
     let ht1 = parseInt(blocks[m].style.height);
     let ht2 = parseInt(blocks[start2].style.height);
@@ -52,18 +46,7 @@ async function merge(l,m,r)
         ht2 = parseInt(blocks[start2].style.height);
         if(ht2 <= ht1)
         {
-            // blocks[start1].style.backgroundColor = "#FF4949";
-            // blocks[start2].style.backgroundColor = "#FF4949"; 
-            // blocks = document.querySelectorAll(".block");     
-            // await new Promise((resolve) =>
-            //   setTimeout(() => {
-            //     resolve();
-            //   }, delay)
-            // );
             await slideBarsRight(start1,start2);
-            blocks = document.querySelectorAll(".block");
-            // blocks[start1].style.backgroundColor = "#58B7FF";
-            // blocks[start2].style.backgroundColor = "#58B7FF";  
             blocks = document.querySelectorAll(".block");
             start2++;
         }
@@ -76,7 +59,6 @@ async function highlight(l,r,colorcode)
 {
     
     let blocks = document.querySelectorAll(".block");
-    // let delay = 250;
     if(r-l == blocks.length-1 && colorcode!="purple")
         return;
     for(let i=l; i<=r; i++)
@@ -87,7 +69,7 @@ async function highlight(l,r,colorcode)
     await new Promise((resolve) =>
     setTimeout(() => {
     resolve();
-    }, delay*(1.5))
+    }, delay)
     );
     for(let i=l; i<=r; i++)
     {

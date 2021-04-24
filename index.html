@@ -13,7 +13,8 @@
     <header>
         <div class="nav">
             <button onclick="generateBlocks()">Generate/Reset</button>
-            <input type="range" min="10" max="30" onchange="updateArraySize(this.value);" oninput="updateArraySize(this.value)" >
+            <input type="range" min="10" max="50" onchange="updateArraySize(this.value);" oninput="updateArraySize(this.value)" >
+            <input type="range" min="20" max="600" onchange="updateTransSpeed(this.value);" oninput="updateTransSpeed(this.value)" >
             <button onclick="bubbleSort()">Bubble Sort</button>
             <button onclick="selectionSort()">Selection Sort</button>
             <button onclick="insertionSort()">Insertion Sort</button>
@@ -30,7 +31,8 @@
     <script src="./src/Algorithms/test.js"></script>
     <script src="./src/Algorithms/mergeSort.js"></script>
     <script src="./src/Algorithms/quickSort.js"></script>
-    <script src="src/components/sliderUpdate.js"></script>
+    <script src="src/components/sizeUpdate.js"></script>
+    <script src="src/components/speedUpdate.js"></script>
     <script src="src/components/putBefore.js"></script>
     <script src="./index.js"></script>
 </body>

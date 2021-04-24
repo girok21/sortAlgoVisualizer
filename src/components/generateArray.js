@@ -14,7 +14,8 @@ function generateBlocks() {
       const block = document.createElement("div");
       block.classList.add("block");
       block.style.height = `${value * 3}px`;
-      block.style.transform = `translateX(${i * 30}px)`;
+      block.style.width =  `${1/size * 700}px`;
+      block.style.transform = `translateX(${i * 1/size * 800}px)`;
   
       // block.appendChild(blockLabel);
       container.appendChild(block);
