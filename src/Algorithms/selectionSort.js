@@ -1,4 +1,4 @@
-async function selectionSort(delay = 250){
+async function selectionSort(){
 
     let blocks = document.querySelectorAll(".block");
     for (let i = 0; i < blocks.length; i += 1) {

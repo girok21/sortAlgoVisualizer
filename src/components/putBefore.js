@@ -1,7 +1,5 @@
 async function slideBarsRight(left, right)
 {
-    // console.log(left);
-    // console.log(right);
     return new Promise(resolve => {
     let blocks = document.querySelectorAll(".block");
 
@@ -11,9 +9,6 @@ async function slideBarsRight(left, right)
     // let transform1 = style1.getPropertyValue("transform");
     let lefttransform = leftstyle.getPropertyValue("transform");//store for now 
 
-    // blocks[right].style.transform = transform1;
-    // // // blocks = document.querySelectorAll(".block");
-    // // // blocks[right].style.transform = transform1;
     for(let i = right-1; i>=left; i--)
     {
         let style1 = window.getComputedStyle(blocks[i+1]);
@@ -21,11 +16,6 @@ async function slideBarsRight(left, right)
         let transform1 = style1.getPropertyValue("transform");
         // let transform2 = style2.getPropertyValue("transform");
         blocks[i].style.transform = transform1;
-    //     await new Promise((resolve) =>
-    //     setTimeout(() => {
-    //       resolve();
-    //     }, delay)
-    //   );
     }
     blocks[right].style.transform = lefttransform;
     window.requestAnimationFrame(function() {
@@ -34,7 +24,7 @@ async function slideBarsRight(left, right)
 
         blocks = document.querySelectorAll(".block");
           resolve();
-        }, 250);
+        }, delay);
     });
     });
 }

@@ -3,10 +3,16 @@ async function mergeSort()
     let blocks = document.querySelectorAll(".block");
     let r = blocks.length-1;
     await funMergeSort(0, r);
-
+    for(let i = 0; i<=r; i++)
+        blocks[i].style.backgroundColor = "#13CE66";
+    await new Promise((resolve) =>
+      setTimeout(() => {
+        resolve();
+      }, delay)
+    );
 }
 
-async function funMergeSort(l,r, delay = 250)
+async function funMergeSort(l,r)
 {
     // let blocks = document.querySelectorAll(".block");
     if(l>=r)
@@ -24,7 +30,7 @@ async function funMergeSort(l,r, delay = 250)
     await merge(l,m,r);
 }
 
-async function merge(l,m,r,delay = 250)
+async function merge(l,m,r)
 {
     let blocks = document.querySelectorAll(".block");
     // if(blocks[m].style.height <= blocks[m+1].style.height)
@@ -33,7 +39,6 @@ async function merge(l,m,r,delay = 250)
     //     return;
     // }  
     let start2 = m+1;//first index of the second half of the array
-    await highlight(l,r,"orange");
     let ht1 = parseInt(blocks[m].style.height);
     let ht2 = parseInt(blocks[start2].style.height);
     if (ht1 <= ht2) {
@@ -65,10 +70,9 @@ async function merge(l,m,r,delay = 250)
         start1++;
     }
     await highlight(l,r,"#13C366");
-    dispHeight();
 }
 
-async function highlight(l,r,colorcode,delay = 250)
+async function highlight(l,r,colorcode)
 {
     
     let blocks = document.querySelectorAll(".block");

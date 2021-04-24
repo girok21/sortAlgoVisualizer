@@ -4,9 +4,7 @@ async function test()
     await slideBarsRight(ind,ind2);
     blocks = document.querySelectorAll(".block");
     ind2 +=1;
-    // dispHeight(blocks);
-    // console.log(blocks.style.height);
-    // await slideBarsRight(ind, ind2 + 1);
+
 }
 
 function dispHeight()

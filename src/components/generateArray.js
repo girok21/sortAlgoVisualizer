@@ -16,17 +16,10 @@ function generateBlocks() {
       block.style.height = `${value * 3}px`;
       block.style.transform = `translateX(${i * 30}px)`;
   
-      // const blockLabel = document.createElement("label");
-      // blockLabel.classList.add("block__id");
-      // blockLabel.innerHTML = value;
-  
       // block.appendChild(blockLabel);
       container.appendChild(block);
     }
-    // console.log(container.children);
-    // return container;
-    // console.log(array);
-    dispHeight();
+
   }
 
   function removeAllChildNodes(container) {

@@ -22,12 +22,9 @@ async function insertionSort(delay = 250) {
 
       while(keyindex>0 && value1<value2)
       {  
-        // console.log(i);  
-        // console.log(value1);
-        // console.log(value2);    
+   
         await swapInd(keyindex-1, keyindex);
-        // value1 = parseInt(blocks[keyindex].style.height);
-        // value2 = parseInt(blocks[keyindex - 1].style.height);
+
         blocks = document.querySelectorAll(".block");
         keyindex--;
         if(keyindex > 0)
