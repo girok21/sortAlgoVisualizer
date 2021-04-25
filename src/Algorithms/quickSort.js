@@ -10,6 +10,7 @@ async function quickSort() {
         resolve();
       }, delay)
     );
+    enalbeSensitiveButton();
 }
 
 async function partition(low, high)
@@ -56,5 +57,4 @@ async function funquickSort(low, high)
         await funquickSort(low, pi - 1);
         await funquickSort(pi + 1, high);
     }
-    enalbeSensitiveButton();
 }
